@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Práctica Economía Circular CIRCULARSOFT – Propuesta sostenible para App de Gestión de Eventos. Juan Raigón y Federico Lora." />
+  <title>Práctica Economía Circular: CIRCULARSOFT</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <!-- Fuente eco-futurista -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <nav id="nav-principal" aria-label="Navegación principal">
+    <div class="nav-logo">
+      <span class="logo-icono">⬡</span>
+      <span class="logo-texto">CIRCULARSOFT</span>
+      <span class="logo-autores">Juan Raigón · Federico Lora</span>
+    </div>
+    <button class="nav-hamburger" id="btn-menu" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-enlaces" id="nav-enlaces" role="list">
+      <li><a href="#contexto">Contexto</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#sistema">Sistema</a></li>
+      <li><a href="#impacto">Impacto</a></li>
+      <li><a href="#7r">Las 7R</a></li>
+      <li><a href="#canvas">Canvas</a></li>
+      <li><a href="#conclusiones">Conclusiones</a></li>
+    </ul>
+  </nav>
+
+  <!-- Barra de progreso de lectura -->
+  <div id="barra-progreso" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+  <main id="contenido-principal">
+
+    <!-- ===================== HERO / PORTADA ===================== -->
+    <section id="hero" class="seccion seccion-hero" aria-label="Portada">
+      <div class="hero-fondo">
+        <div class="hex-grid" aria-hidden="true">
+          <div class="hex h1"></div><div class="hex h2"></div><div class="hex h3"></div>
+          <div class="hex h4"></div><div class="hex h5"></div><div class="hex h6"></div>
+          <div class="hex h7"></div><div class="hex h8"></div>
+        </div>
+        <div class="particulas" aria-hidden="true" id="particulas"></div>
+      </div>
+      <div class="hero-contenido">
+        <div class="hero-badge">Sostenibilidad Aplicada al Sistema Productivo · EcoCode Studio</div>
+        <h1 class="hero-titulo">
+          <span class="titulo-linea1">Práctica Economía Circular:</span>
+          <span class="titulo-linea2">CIRCULARSOFT</span>
+        </h1>
+        <p class="hero-subtitulo">Propuesta de diseño sostenible para una <strong>App de Gestión de Eventos</strong> aplicando las 7R de la Economía Circular</p>
+        <div class="hero-autores" aria-label="Autores de la práctica">
+          <div class="autor-chip">
+            <span class="autor-ico">👤</span>
+            <span>Juan Raigón</span>
+          </div>
+          <div class="autor-chip">
+            <span class="autor-ico">👤</span>
+            <span>Federico Lora</span>
+          </div>
+        </div>
+        <div class="hero-chips" aria-label="Fases de la práctica">
+          <span class="chip">📋 Fase 1: Análisis</span>
+          <span class="chip">♻️ Fase 2: Las 7R</span>
+          <span class="chip">📄 Fase 3: Canvas</span>
+          <span class="chip">🎤 Fase 4: Defensa</span>
+        </div>
+        <a href="#contexto" class="btn-hero" aria-label="Comenzar práctica">
+          Ver práctica <span class="btn-flecha">↓</span>
+        </a>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">scroll</div>
+    </section>
+
+    <!-- ===================== SECCIÓN: CONTEXTO ===================== -->
+    <section id="contexto" class="seccion" aria-labelledby="tit-contexto">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">01</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 1 · Análisis</p>
+            <h2 id="tit-contexto">Contexto y Problema</h2>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="tarjeta tarjeta-destacada">
+            <div class="tarjeta-icono">📋</div>
+            <h3>¿Qué es esta práctica?</h3>
+            <p>Nuestra clase actúa como el estudio de desarrollo <strong>EcoCode Studio</strong>. Un cliente ficticio quiere desarrollar una <strong>app de gestión de eventos</strong> (conciertos, bodas, conferencias, festivales, ferias y eventos corporativos), pero impone una condición clara:</p>
+            <p>El software debe diseñarse siguiendo los principios de la <strong>Economía Circular (7R)</strong>. No basta con que funcione: debe ser sostenible, eficiente y responsable.</p>
+            <p>Esta presentación recoge nuestra propuesta como consultores de sostenibilidad digital.</p>
+          </div>
+
+          <div class="tarjeta">
+            <div class="tarjeta-icono">❗</div>
+            <h3>Problema que detectamos</h3>
+            <ul class="lista-pro">
+              <li>Las apps de eventos actuales duplican funcionalidades sin optimizarlas</li>
+              <li>Altísimo consumo de servidores por consultas no optimizadas</li>
+              <li>Sistemas monolíticos imposibles de actualizar sin reescribirlos</li>
+              <li>Datos de eventos pasados abandonados (no reutilizados ni aprovechados)</li>
+              <li>Dependencia de plataformas propietarias costosas</li>
+              <li>Ciclos de vida cortos: apps sustituidas cada 2-3 años generando residuos digitales</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-3 mt-2">
+          <div class="stat-card">
+            <div class="stat-num">~3.5%</div>
+            <div class="stat-label">del CO₂ global proviene del sector TIC</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">+400TB</div>
+            <div class="stat-label">de datos de eventos generados al año solo en España</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">60%</div>
+            <div class="stat-label">del código de apps similares es duplicado o reutilizable</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN: OBJETIVOS ===================== -->
+    <section id="objetivos" class="seccion seccion-alt" aria-labelledby="tit-objetivos">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">02</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 1 · Nuestra propuesta</p>
+            <h2 id="tit-objetivos">Objetivos de Nuestra Propuesta</h2>
+          </div>
+        </div>
+
+        <div class="grid-obj">
+          <div class="obj-card" data-delay="0">
+            <div class="obj-ico">🌱</div>
+            <h3>Sostenibilidad Digital</h3>
+            <p>Diseñar un sistema que minimice el consumo energético, optimice los recursos de servidor y tenga el menor impacto ambiental posible en todo su ciclo de vida.</p>
+          </div>
+          <div class="obj-card" data-delay="1">
+            <div class="obj-ico">⚙️</div>
+            <h3>Eficiencia Técnica</h3>
+            <p>Arquitectura modular y escalable que permita crecer sin reescribir el sistema. Código limpio, mantenible y documentado para reducir la deuda técnica.</p>
+          </div>
+          <div class="obj-card" data-delay="2">
+            <div class="obj-ico">♻️</div>
+            <h3>Aplicación Real de 7R</h3>
+            <p>Cada decisión de diseño arquitectónico debe justificarse bajo al menos una de las 7R. No se toman decisiones técnicas sin evaluación de impacto circular.</p>
+          </div>
+          <div class="obj-card" data-delay="3">
+            <div class="obj-ico">🤝</div>
+            <h3>Colaboración Abierta</h3>
+            <p>Priorizar herramientas open source, APIs abiertas y estándares públicos. Evitar dependencias propietarias que generen obsolescencia forzada.</p>
+          </div>
+          <div class="obj-card" data-delay="4">
+            <div class="obj-ico">📊</div>
+            <h3>Argumentación Ambiental</h3>
+            <p>Toda decisión técnica debe poder defenderse desde una perspectiva ambiental medible con métricas concretas de sostenibilidad.</p>
+          </div>
+          <div class="obj-card" data-delay="5">
+            <div class="obj-ico">🔁</div>
+            <h3>Longevidad del Sistema</h3>
+            <p>El sistema debe diseñarse para durar 10+ años mediante actualizaciones incrementales, sin necesidad de sustituciones completas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN: DESCRIPCIÓN DEL SISTEMA ===================== -->
+    <section id="sistema" class="seccion" aria-labelledby="tit-sistema">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">03</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 1 · Nuestra propuesta de sistema</p>
+            <h2 id="tit-sistema">Descripción del Sistema</h2>
+          </div>
+        </div>
+
+        <div class="sistema-intro">
+          <p>Nuestra propuesta es diseñar <strong>EventFlow</strong> como una <strong>Progressive Web App (PWA)</strong> con arquitectura de microservicios. No programamos la app entera, pero aquí describimos cómo la diseñaríamos para que sea sostenible desde el primer día.</p>
+        </div>
+
+        <div class="grid-2 mt-2">
+          <div>
+            <h3 class="subtitulo-sec">Módulos Funcionales</h3>
+            <div class="modulo-lista">
+              <div class="modulo-item">
+                <span class="modulo-ico">🗓️</span>
+                <div>
+                  <strong>Gestión de Eventos</strong>
+                  <p>Creación, edición y publicación de eventos (conciertos, bodas, conferencias, festivales). Gestión de fechas, venues y capacidades.</p>
+                </div>
+              </div>
+              <div class="modulo-item">
+                <span class="modulo-ico">🎟️</span>
+                <div>
+                  <strong>Venta de Entradas</strong>
+                  <p>Sistema de ticketing integrado con QR reutilizables, reducción de papel impreso y validación digital en puerta.</p>
+                </div>
+              </div>
+              <div class="modulo-item">
+                <span class="modulo-ico">👥</span>
+                <div>
+                  <strong>Gestión de Participantes</strong>
+                  <p>Registro, listas de invitados, check-in digital, gestión de roles (asistente, proveedor, voluntario, artista).</p>
+                </div>
+              </div>
+              <div class="modulo-item">
+                <span class="modulo-ico">📦</span>
+                <div>
+                  <strong>Proveedores y Recursos</strong>
+                  <p>Gestión de catering, logística, montaje, técnicos de sonido/luz. Reutilización de proveedores en eventos recurrentes.</p>
+                </div>
+              </div>
+              <div class="modulo-item">
+                <span class="modulo-ico">📈</span>
+                <div>
+                  <strong>Analítica Sostenible</strong>
+                  <p>Dashboard de métricas: asistencia, huella de carbono estimada, % digital vs físico, eficiencia energética del evento.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="subtitulo-sec">Arquitectura Técnica</h3>
+            <div class="arq-diagrama" aria-label="Diagrama de arquitectura">
+              <div class="arq-capa arq-frontend">
+                <span>Frontend PWA</span>
+                <small>Vue.js 3 + Vite · Service Worker · Offline-first</small>
+              </div>
+              <div class="arq-flecha" aria-hidden="true">⬇ API REST + GraphQL</div>
+              <div class="arq-capa arq-backend">
+                <span>Backend Microservicios</span>
+                <small>Node.js · Docker · API Gateway</small>
+              </div>
+              <div class="arq-flecha" aria-hidden="true">⬇ ORM optimizado</div>
+              <div class="arq-capa arq-datos">
+                <span>Capa de Datos</span>
+                <small>PostgreSQL · Redis Cache · S3 optimizado</small>
+              </div>
+              <div class="arq-flecha" aria-hidden="true">⬇ CI/CD sostenible</div>
+              <div class="arq-capa arq-infra">
+                <span>Infraestructura Verde</span>
+                <small>Servidores 100% renovable · Auto-scaling · CDN</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN: IMPACTO AMBIENTAL ===================== -->
+    <section id="impacto" class="seccion seccion-alt" aria-labelledby="tit-impacto">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">04</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 1 · Análisis de impacto</p>
+            <h2 id="tit-impacto">Análisis de Impacto Ambiental</h2>
+          </div>
+        </div>
+
+        <div class="impacto-intro">
+          <p>El software tiene impacto ambiental real. Cada petición al servidor, cada consulta de base de datos, cada archivo almacenado consume energía. EventFlow identifica y mitiga estos impactos desde el diseño.</p>
+        </div>
+
+        <div class="grid-2 mt-2">
+          <div>
+            <h3 class="subtitulo-sec">⚠️ Impactos Potenciales</h3>
+            <div class="impacto-lista negativa">
+              <div class="impacto-row">
+                <span class="impacto-icono">🖥️</span>
+                <div>
+                  <strong>Consumo de Servidores</strong>
+                  <p>Servidores activos 24/7 para eventos que ocurren puntualmente. Estimado: 2-8 kWh/día sin optimización.</p>
+                </div>
+              </div>
+              <div class="impacto-row">
+                <span class="impacto-icono">📡</span>
+                <div>
+                  <strong>Tráfico de Red</strong>
+                  <p>Imágenes sin comprimir, vídeos de eventos, APIs sin cachear pueden generar cientos de MB por usuario/sesión.</p>
+                </div>
+              </div>
+              <div class="impacto-row">
+                <span class="impacto-icono">🗄️</span>
+                <div>
+                  <strong>Almacenamiento Creciente</strong>
+                  <p>Datos de eventos pasados acumulados indefinidamente sin política de archivado o eliminación responsable.</p>
+                </div>
+              </div>
+              <div class="impacto-row">
+                <span class="impacto-icono">📱</span>
+                <div>
+                  <strong>Obsolescencia Tecnológica</strong>
+                  <p>Apps que requieren actualizaciones constantes de hardware o SO fuerzan renovación de dispositivos innecesaria.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="subtitulo-sec">✅ Estrategias de Mitigación</h3>
+            <div class="impacto-lista positiva">
+              <div class="impacto-row">
+                <span class="impacto-icono">⚡</span>
+                <div>
+                  <strong>Energía Renovable</strong>
+                  <p>Despliegue en proveedores cloud certificados con 100% energía renovable (Hetzner Green, OVH, AWS Green Regions).</p>
+                </div>
+              </div>
+              <div class="impacto-row">
+                <span class="impacto-icono">💤</span>
+                <div>
+                  <strong>Auto-Scaling Inteligente</strong>
+                  <p>Escalar a cero fuera de periodos de alta demanda. Ahorro estimado del 70% en cómputo en horas valle.</p>
+                </div>
+              </div>
+              <div class="impacto-row">
+                <span class="impacto-icono">🗜️</span>
+                <div>
+                  <strong>Compresión y CDN</strong>
+                  <p>WebP/AVIF para imágenes, Brotli para texto, CDN para reducir latencia y consumo de ancho de banda hasta un 60%.</p>
+                </div>
+              </div>
+              <div class="impacto-row">
+                <span class="impacto-icono">📊</span>
+                <div>
+                  <strong>Dashboard de Huella</strong>
+                  <p>Medición en tiempo real del CO₂ estimado por evento. Objetivo: <0.5g CO₂ por visita de página (referencia GWF).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN: LAS 7R ===================== -->
+    <section id="7r" class="seccion seccion-7r" aria-labelledby="tit-7r">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">05</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 2 · Economía Circular</p>
+            <h2 id="tit-7r">Las 7R Aplicadas</h2>
+          </div>
+        </div>
+        <p class="seccion-desc">Para cada R proponemos decisiones técnicas concretas y justificadas. Haz clic en cada tarjeta para ver nuestra propuesta en detalle.</p>
+
+        <div class="r-grid" role="list">
+
+          <!-- R1: REDISEÑAR -->
+          <article class="r-card" data-r="1" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r1-detalle">
+              <div class="r-header">
+                <div class="r-numero">R1</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Rediseñar</h3>
+                  <p class="r-resumen">Arquitectura modular, escalable y eficiente desde el origen</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r1-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Microservicios desacoplados:</strong> Módulo de ticketing, gestión de usuarios, notificaciones y analítica como servicios independientes. Si falla uno, no cae todo el sistema.</li>
+                    <li><strong>API-First Design:</strong> La lógica de negocio nunca está ligada al frontend. Cualquier cliente (web, móvil, IoT) consume la misma API.</li>
+                    <li><strong>Domain-Driven Design (DDD):</strong> El modelo de datos refleja el dominio real de eventos: Venue, Evento, Participante, Ticket, Proveedor, Recurso.</li>
+                    <li><strong>PWA con Offline-First:</strong> Funciona sin conexión para check-in en áreas con cobertura limitada (festivales de campo, bodas en masías remotas).</li>
+                    <li><strong>Diseño accesible (WCAG AA):</strong> Contraste, navegación por teclado y lectores de pantalla integrados desde el inicio, no añadidos después.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>La arquitectura modular permite desactivar módulos no usados, reduciendo el footprint de cómputo activo. Estimamos una <strong>reducción del 35%</strong> en recursos de servidor respecto a una arquitectura monolítica equivalente.</p>
+                    <div class="r-metrica">
+                      <span>Eficiencia arquitectónica</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:85%">85%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- R2: REDUCIR -->
+          <article class="r-card" data-r="2" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r2-detalle">
+              <div class="r-header">
+                <div class="r-numero">R2</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Reducir</h3>
+                  <p class="r-resumen">Minimizar consumo de CPU, RAM, red y almacenamiento</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r2-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Optimización de consultas SQL:</strong> Índices estratégicos, paginación por cursor (no por offset), evitar N+1 queries con DataLoader pattern.</li>
+                    <li><strong>Lazy Loading agresivo:</strong> Imágenes, componentes JS y rutas cargadas solo cuando se necesitan. Reducción de bundle inicial: -60%.</li>
+                    <li><strong>Caché multicapa:</strong> Redis para sesiones y datos calientes, caché HTTP con ETags, Service Worker para assets estáticos.</li>
+                    <li><strong>Compresión de medios:</strong> Imágenes convertidas automáticamente a WebP/AVIF al subirse. Reducción media del 70% en peso.</li>
+                    <li><strong>Ticketing sin papel:</strong> QR digitales eliminan la impresión. Estimado: 0.5 toneladas CO₂/año evitadas por cada 100.000 entradas.</li>
+                    <li><strong>Notificaciones batch:</strong> Emails y SMS agrupados por lotes en lugar de enviarse uno a uno, reduciendo peticiones de API externas.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>El ticketing digital y la eliminación de papel físico representa el mayor impacto. Para un evento de 10.000 personas: <strong>evitamos ~50kg de papel impreso</strong> y sus emisiones asociadas de transporte y residuos.</p>
+                    <div class="r-metrica">
+                      <span>Reducción consumo red</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:70%">70%</div></div>
+                    </div>
+                    <div class="r-metrica">
+                      <span>Reducción queries DB</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:55%">55%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- R3: REUTILIZAR -->
+          <article class="r-card" data-r="3" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r3-detalle">
+              <div class="r-header">
+                <div class="r-numero">R3</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Reutilizar</h3>
+                  <p class="r-resumen">Frameworks open source, componentes y APIs ya existentes</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r3-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Stack 100% open source:</strong> Vue.js, Node.js, PostgreSQL, Redis, Docker. Sin licencias propietarias ni vendor lock-in.</li>
+                    <li><strong>Design System compartido:</strong> Librería de componentes (botones, formularios, modales) reutilizada en web y en la app móvil.</li>
+                    <li><strong>Plantillas de eventos:</strong> Configuración de bodas, conciertos o conferencias guardada y reutilizable. Un organizador no rellena datos desde cero en cada evento.</li>
+                    <li><strong>APIs de pago consolidadas:</strong> Stripe/PayPal ya probados en lugar de implementar pasarela propia. Evitamos 6 meses de desarrollo y mantenimiento.</li>
+                    <li><strong>Autenticación OAuth2/OIDC:</strong> Reutilización de proveedores de identidad (Google, GitHub, email) sin base de datos propia de contraseñas.</li>
+                    <li><strong>Base de datos de venues:</strong> Integración con OpenStreetMap y datos públicos de espacios culturales municipales.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>Reutilizar librerías consolidadas evita duplicar código que ya ha sido optimizado por miles de colaboradores. Estimamos que el <strong>65% del sistema</strong> se apoya en código ya existente y probado.</p>
+                    <div class="r-metrica">
+                      <span>% código reutilizado</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:65%">65%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- R4: REPARAR -->
+          <article class="r-card" data-r="4" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r4-detalle">
+              <div class="r-header">
+                <div class="r-numero">R4</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Reparar</h3>
+                  <p class="r-resumen">Refactorización y mantenimiento para alargar la vida útil del código</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r4-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Plan de mantenimiento trimestral:</strong> Sprint de refactorización dedicado cada 3 meses para eliminar deuda técnica acumulada.</li>
+                    <li><strong>Cobertura de tests ≥80%:</strong> Tests unitarios (Vitest), de integración y E2E (Playwright). Los bugs se detectan antes de llegar a producción.</li>
+                    <li><strong>Linting estricto:</strong> ESLint + Prettier obligatorios en CI/CD. Se rechazan merges con código de baja calidad.</li>
+                    <li><strong>Monitoring en tiempo real:</strong> Sentry para errores, Grafana para métricas de rendimiento. Los problemas se detectan y reparan en horas.</li>
+                    <li><strong>Documentación viva:</strong> OpenAPI/Swagger autogenerado desde el código. La documentación no queda desactualizada porque se genera automáticamente.</li>
+                    <li><strong>Política de zero-downtime deploys:</strong> Blue-Green deployments para actualizar sin interrumpir eventos en curso.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>Cada bug corregido temprano evita costosas reescrituras futuras. Un sistema mantenido correctamente tiene una <strong>vida útil 3-4× mayor</strong> que uno sin mantenimiento, retrasando la generación de residuos tecnológicos.</p>
+                    <div class="r-metrica">
+                      <span>Cobertura de tests</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:80%">80%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- R5: RENOVAR -->
+          <article class="r-card" data-r="5" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r5-detalle">
+              <div class="r-header">
+                <div class="r-numero">R5</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Renovar</h3>
+                  <p class="r-resumen">Actualizaciones incrementales sin necesidad de reescribir el sistema</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r5-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Versionado semántico (SemVer):</strong> Las APIs tienen versión explícita (v1, v2). Los clientes antiguos siguen funcionando mientras se migran gradualmente.</li>
+                    <li><strong>Feature flags:</strong> Nuevas funcionalidades activables/desactivables sin desplegar nuevo código. Rollout gradual al 1%, 10%, 100% de usuarios.</li>
+                    <li><strong>Dependencias actualizables:</strong> Dependabot automatiza alertas de seguridad y propone actualizaciones de dependencias con tests automáticos.</li>
+                    <li><strong>Migraciones de BD no destructivas:</strong> Solo se añaden columnas o tablas; nunca se eliminan en la misma versión. Rollback siempre posible.</li>
+                    <li><strong>Compatibilidad con dispositivos antiguos:</strong> Soporte para Android 8+ e iOS 13+. No forzamos actualización de hardware a los usuarios.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>El soporte para dispositivos de hasta 6 años de antigüedad evita la obsolescencia forzada. Fabricar un smartphone genera entre <strong>50-80kg de CO₂</strong>; alargar su uso útil es el mayor impacto positivo que puede hacer una app.</p>
+                    <div class="r-metrica">
+                      <span>Cobertura de dispositivos</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:92%">92%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- R6: RECUPERAR -->
+          <article class="r-card" data-r="6" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r6-detalle">
+              <div class="r-header">
+                <div class="r-numero">R6</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Recuperar</h3>
+                  <p class="r-resumen">Aprovechar datos históricos y sistemas existentes del cliente</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r6-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Importador de datos legados:</strong> Herramienta ETL para migrar datos de Eventbrite, Excel, o sistemas propietarios del cliente sin pérdida de información.</li>
+                    <li><strong>Historial de asistentes:</strong> Los datos de participantes de eventos pasados informan recomendaciones futuras (con consentimiento RGPD explícito).</li>
+                    <li><strong>Recuperación de plantillas:</strong> Configuraciones de eventos anteriores (catering, sonido, decoración) reutilizables automáticamente en eventos similares.</li>
+                    <li><strong>Analytics retroactivo:</strong> Los datos históricos permiten predecir aforo óptimo, reduciendo desperdicio de recursos (comida, sillas, personal).</li>
+                    <li><strong>API de integración bidireccional:</strong> Conexión con sistemas de gestión de espacios (Amadeus, Salesforce Events) ya en uso por el cliente.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>La predicción de aforo con datos históricos reduce el desperdicio físico. En catering, un error de estimación del 10% en un evento de 500 personas genera <strong>~50kg de comida desperdiciad</strong>. Los datos recuperados minimizan esto.</p>
+                    <div class="r-metrica">
+                      <span>Datos históricos aprovechados</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:78%">78%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- R7: RECICLAR -->
+          <article class="r-card" data-r="7" role="listitem">
+            <button class="r-toggle" aria-expanded="false" aria-controls="r7-detalle">
+              <div class="r-header">
+                <div class="r-numero">R7</div>
+                <div class="r-info">
+                  <h3 class="r-nombre">Reciclar</h3>
+                  <p class="r-resumen">Código de EventFlow reutilizable en futuros proyectos</p>
+                </div>
+                <span class="r-chevron" aria-hidden="true">+</span>
+              </div>
+            </button>
+            <div class="r-detalle" id="r7-detalle" hidden>
+              <div class="r-detalle-inner">
+                <div class="r-col">
+                  <h4>Decisiones Técnicas Concretas</h4>
+                  <ul class="lista-r">
+                    <li><strong>Publicación en npm/GitHub Packages:</strong> El sistema de ticketing, el módulo de notificaciones y el design system se publican como paquetes reutilizables.</li>
+                    <li><strong>Licencia MIT/Apache 2.0:</strong> Todo el código desarrollado expresamente para EventFlow se libera como open source, devolviendo valor a la comunidad.</li>
+                    <li><strong>Arquitectura plug-and-play:</strong> Los microservicios son contenedores Docker independientes que pueden "reciclarse" en otros proyectos (e-commerce, reservas hoteleras).</li>
+                    <li><strong>Documentación de patrones:</strong> Un libro de arquitectura interno documenta los patrones exitosos para que otros proyectos del estudio no partan de cero.</li>
+                    <li><strong>Política de datos al finalizar:</strong> Al cierre del servicio, los datos exportables se entregan al cliente. El código no se abandona, se archiva con documentación completa.</li>
+                  </ul>
+                </div>
+                <div class="r-col">
+                  <h4>Impacto Ambiental</h4>
+                  <div class="r-impacto-box">
+                    <p>Publicar módulos como open source evita que otras empresas desarrollen lo mismo desde cero, ahorrando miles de horas de servidor en CI/CD y desarrollo redundante a nivel global.</p>
+                    <div class="r-metrica">
+                      <span>Módulos reciclables</span>
+                      <div class="barra-metrica"><div class="barra-fill" style="--pct:90%">90%</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- fin r-grid -->
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN: CANVAS CIRCULAR ===================== -->
+    <section id="canvas" class="seccion seccion-alt" aria-labelledby="tit-canvas">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">06</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 3 · Canvas</p>
+            <h2 id="tit-canvas">Canvas Circular del Proyecto</h2>
+          </div>
+        </div>
+
+        <div class="canvas-grid">
+
+          <div class="canvas-celda canvas-nombre">
+            <h3>🏷️ Nombre del Proyecto</h3>
+            <div class="canvas-val grande">EventFlow Sostenible</div>
+            <p>Versión 1.0 · EcoCode Studio · 2025-2026</p>
+          </div>
+
+          <div class="canvas-celda">
+            <h3>📄 Descripción del Sistema</h3>
+            <p>PWA para gestión integral de eventos (conciertos, bodas, conferencias, festivales). Permite crear, vender entradas, gestionar asistentes y proveedores, con analítica de sostenibilidad integrada. Arquitectura de microservicios, API-First, offline-capable y desplegada en infraestructura de energía renovable.</p>
+          </div>
+
+          <div class="canvas-celda">
+            <h3>🌍 Impacto Ambiental Estimado</h3>
+            <ul class="lista-canvas">
+              <li>⚡ Consumo: ~1.2 kWh/día (vs 8 kWh baseline)</li>
+              <li>💧 Huella hídrica: reducción 40% vs datacenter convencional</li>
+              <li>📄 Papel eliminado: ~0.5T CO₂/año por c/100k tickets</li>
+              <li>📱 Soporte dispositivos: Android 8+, iOS 13+</li>
+              <li>🌱 CO₂ por visita: &lt;0.5g (objetivo Green Web Foundation)</li>
+            </ul>
+          </div>
+
+          <div class="canvas-celda canvas-7r-resumen">
+            <h3>♻️ Las 7R en Resumen</h3>
+            <div class="canvas-7r-grid">
+              <div class="c7r-item"><span class="c7r-num">R1</span><span>Arquitectura modular</span></div>
+              <div class="c7r-item"><span class="c7r-num">R2</span><span>Ticketing sin papel</span></div>
+              <div class="c7r-item"><span class="c7r-num">R3</span><span>Stack open source</span></div>
+              <div class="c7r-item"><span class="c7r-num">R4</span><span>Tests + refactoring</span></div>
+              <div class="c7r-item"><span class="c7r-num">R5</span><span>SemVer + compat.</span></div>
+              <div class="c7r-item"><span class="c7r-num">R6</span><span>Migración de datos</span></div>
+              <div class="c7r-item"><span class="c7r-num">R7</span><span>Open source modules</span></div>
+            </div>
+          </div>
+
+          <div class="canvas-celda canvas-metricas">
+            <h3>📊 Métricas e Indicadores de Sostenibilidad</h3>
+            <div class="metricas-grid">
+              <div class="metrica-item">
+                <div class="met-val">85%</div>
+                <div class="met-label">Reducción consultas DB</div>
+              </div>
+              <div class="metrica-item">
+                <div class="met-val">65%</div>
+                <div class="met-label">Código reutilizado</div>
+              </div>
+              <div class="metrica-item">
+                <div class="met-val">70%</div>
+                <div class="met-label">Reducción peso imágenes</div>
+              </div>
+              <div class="metrica-item">
+                <div class="met-val">92%</div>
+                <div class="met-label">Cobertura dispositivos</div>
+              </div>
+              <div class="metrica-item">
+                <div class="met-val">80%</div>
+                <div class="met-label">Cobertura de tests</div>
+              </div>
+              <div class="metrica-item">
+                <div class="met-val">10+</div>
+                <div class="met-label">Años vida útil objetivo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="canvas-celda">
+            <h3>👥 Roles del Equipo</h3>
+            <div class="roles-lista">
+              <div class="rol-item"><span class="rol-ico">🏗️</span><strong>Arquitecto/a Sostenible:</strong> Diseño de microservicios y API-First</div>
+              <div class="rol-item"><span class="rol-ico">🌿</span><strong>Resp. Impacto Ambiental:</strong> Métricas CO₂ y política de energía verde</div>
+              <div class="rol-item"><span class="rol-ico">🔧</span><strong>Ingeniero/a Mantenimiento:</strong> Tests, CI/CD y plan de refactorización</div>
+              <div class="rol-item"><span class="rol-ico">📈</span><strong>Analista de Eficiencia:</strong> Optimización de queries, caché y compresión</div>
+              <div class="rol-item"><span class="rol-ico">🎤</span><strong>Portavoz:</strong> Defensa de decisiones técnicas ante auditores</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SECCIÓN: CONCLUSIONES ===================== -->
+    <section id="conclusiones" class="seccion seccion-conclusiones" aria-labelledby="tit-conclusiones">
+      <div class="seccion-contenedor">
+        <div class="seccion-header">
+          <div class="seccion-num">07</div>
+          <div>
+            <p class="seccion-etiqueta">Fase 4 · Defensa</p>
+            <h2 id="tit-conclusiones">Conclusiones y Defensa</h2>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div>
+            <h3 class="subtitulo-sec">¿Por qué EventFlow es sostenible?</h3>
+            <div class="conclusion-lista">
+              <div class="concl-item">
+                <span class="concl-num">01</span>
+                <p>La sostenibilidad no es una característica añadida al final, es una <strong>restricción de diseño</strong> desde el día 0. Cada decisión arquitectónica tiene una justificación ambiental.</p>
+              </div>
+              <div class="concl-item">
+                <span class="concl-num">02</span>
+                <p>Eliminar el papel en eventos es el impacto más tangible: <strong>millones de entradas impresas sustituidas</strong> por QR digitales que funcionan offline.</p>
+              </div>
+              <div class="concl-item">
+                <span class="concl-num">03</span>
+                <p>La arquitectura modular no solo es técnicamente mejor: <strong>permite apagar lo que no se usa</strong>, reduciendo el consumo energético cuando la demanda es baja.</p>
+              </div>
+              <div class="concl-item">
+                <span class="concl-num">04</span>
+                <p>El código open source <strong>devuelve valor a la comunidad</strong>. Cada empresa que reutiliza nuestros módulos es CO₂ de desarrollo que no se genera.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="subtitulo-sec">Reflexión Final</h3>
+            <div class="reflexion-box">
+              <blockquote>
+                <p>"¿Puede el software ser sostenible aunque no sea un producto físico?"</p>
+              </blockquote>
+              <p>Sí, y EventFlow es la prueba. El software consume energía real, genera datos que requieren almacenamiento físico y puede provocar o evitar la obsolescencia de hardware.</p>
+              <p>Un desarrollador responsable entiende que <strong>cada línea de código tiene impacto</strong>: en el servidor que la ejecuta, en el dispositivo que la muestra y en el planeta que genera esa electricidad.</p>
+              <p>La Economía Circular aplicada al software no es idealismo: es <strong>ingeniería de calidad</strong> con consciencia ambiental. Y EventFlow demuestra que ambas cosas son completamente compatibles.</p>
+            </div>
+
+            <div class="idea-clave">
+              <span class="idea-ico">💡</span>
+              <p><em>"Un buen desarrollador no solo escribe código que funciona.<br>Escribe código que perdura, se mantiene y respeta los recursos."</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-contenido">
+      <div class="footer-logo">
+        <span class="logo-icono">⬡</span>
+        <span>Práctica Economía Circular: CIRCULARSOFT</span>
+      </div>
+      <p class="footer-creditos">Juan Raigón · Federico Lora · EcoCode Studio · Sostenibilidad Aplicada al Sistema Productivo</p>
+      <p class="footer-huella">🌱 Esta presentación pesa menos de 150KB y está optimizada para bajo impacto energético</p>
+    </div>
+  </footer>
+
+  <!-- Script al final para no bloquear el render -->
+  <script src="scripts.js" defer></script>
+</body>
+</html>
